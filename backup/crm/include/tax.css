@@ -1,0 +1,21 @@
+
+table {
+	font:9pt arial;
+	color:#000000;
+	line-height:140%;
+}
+
+img {
+	border:0;
+}
+
+.tr_bold { font-weight:bold }
+.td_fontcolor1 {color:00111B}
+
+
+.price {font-family:arial;color:#E83100;font-weight:bold};
+.pricenb {font-family:arial;color:#E83100;};
+.pricedis {font-family:arial;color:#034074;font-weight:bold};
+.menu01 {font-size:10pt}
+
+.font10 {font-size:10pt;font-family:arial;color:#000000;font-weight:bold};

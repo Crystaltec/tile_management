@@ -1,0 +1,41 @@
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+<LINK REL="stylesheet" HREF="/zb/admin/menu.css" TYPE="text/css">
+<SCRIPT language="javascript" SRC="/zb/admin/menu.js"></SCRIPT>
+
+<center>
+
+<table width="1000" border="0" cellspacing="0" cellpadding="0" background="images/menu.jpg">
+<tr><td><img src="/images/space.gif" width="10" height="3"></td></tr>
+<tr><td>
+
+<div id="menuBar" style="height:<?if(eregi("MSIE 6.0", $_SERVER["HTTP_USER_AGENT"])) echo "32"; else echo "28";?>">
+
+<img src="/images/space.gif" width="10" align="absmiddle">
+<a href="/"><img src="images/home.gif" align="absmiddle" border="0"></a>
+&nbsp;
+
+<!--<a class="menuButton" href="" onclick="return clickButton(this, 'lm01');" onmouseover="mouseoverButton(this, 'lm01');"><b>Member management</b></a>-->
+<a class="menuButton" href="" onclick="return clickButton(this, 'lm02');" onmouseover="mouseoverButton(this, 'lm02');"><b>Board management</b></a>
+<!--<a class="menuButton" href="/enq/admin/enqlist.php">고객문의</a>-->
+<a class="menuButton" href="/logout.php"><b>Logout</b></a>
+</div>
+
+<!--
+    드롭 다운 메뉴에 대한 태그 정의
+//-->
+<DIV ID="lm01" CLASS="menu">
+	<A CLASS="menuItem" HREF="/zm/admin/memberlist.php">Member list</A>
+	<A CLASS="menuItem" HREF="/zm/admin/membermodify.php">Member regist</A>
+</DIV>
+
+<DIV ID="lm02" CLASS="menu">
+	<A CLASS="menuItem" HREF="/zb/admin/boardlist.php">Board list</A>
+</DIV>
+
+</td>
+<td align="right" style="color:#000000" valign="top" style="padding-top:7">
+Administrator Logined.
+<b></b><img src="/images/space.gif" width="10"></td>
+</tr>
+</table>
+</center>

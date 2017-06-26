@@ -1,0 +1,38 @@
+# -FrontPage-
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+#The next line modified by DenyIP
+order allow,deny
+#The next line modified by DenyIP
+#deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName www.sungoldtile.com
+AuthUserFile public_html/_vti_pvt/service.pwd
+AuthGroupFile public_html/_vti_pvt/service.grp
+AddType text/x-component htc
+
+Options -Indexes
+
+RewriteEngine on
+
+
+RewriteCond %{QUERY_STRING} ^[^=]*$
+RewriteCond %{QUERY_STRING} %2d|\- [NC]
+RewriteRule .? - [F,L]
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+
+ 
+ 
+DirectoryIndex index.php

@@ -1,0 +1,176 @@
+body {
+	margin: 0;
+	padding: 0;
+	font:9pt arial;
+	color:#666666;
+	line-height:140%;
+
+	/*
+	scrollbar-3dlight-color:#7080C0; 
+	scrollbar-arrow-color:#7080C0; 
+	scrollbar-base-color:#7080C0; 
+	scrollbar-darkshadow-color:#1F2C70; 
+	scrollbar-face-color:#1F2C70; 
+	scrollbar-highlight-color:#1F2C70; 
+	scrollbar-shadow-color:#7080C0;
+	*/
+}
+
+a {
+	color:#666666;
+	line-height:140%;
+	text-decoration: none;
+}
+
+a:active, a:hover {
+	color:#666666;
+	line-height:140%;
+	text-decoration: underline;
+}
+
+table {
+	font:9pt arial;
+	color:#000000;
+	line-height:140%;
+}
+
+img {
+	border:0;
+}
+
+form {
+	margin:0;
+}
+
+.input {
+	border:1px solid #8B9CB4;
+	background-Color:#FFFFFF;
+	font:9pt Tahoma;
+	color:#000000;
+	margin:1px;
+}
+
+.textarea {
+	border:1px solid #8B9CB4;
+	background-Color:#FFFFFF;
+	font:9pt Tahoma;
+	color:#000000;
+	margin:1px;
+}
+
+.button {
+	border:1px solid #8B9CB4;
+	background-Color:E0E0E0;
+	font:9pt Tahoma;
+	color:#000000;
+	margin:1px;
+}
+
+
+.button02 {	
+	background-Color:E0E0E0;
+	font:10pt Tahoma;
+	color:#000000;
+	margin:1px;
+}
+
+.tr_bold { font-weight:bold }
+.tr_bold02 { font-weight:bold;color:#940000;}
+.tr_normal02 { font-weight:normal;color:black; }
+.td_fontcolor1 {color:00111B}
+
+
+.price {font-family:arial;color:#E83100;font-weight:bold};
+.price2 {
+	color:#B60000;
+	font-size:9pt;
+	padding-right:4px;
+	text-align:right;
+	font-weight:bold;	
+}
+.pricenb {font-family:arial;color:#E83100;};
+.pricedis {font-family:arial;color:#034074;font-weight:bold};
+.menu01 {font-size:10pt}
+
+.quantity01 {
+	color:#000000;
+	font-size:9pt;
+	padding-right:4px;
+	text-align:right;
+	font-weight:bold;
+}
+
+.quantity0101 {
+	color:#000000;
+	font-size:10pt;
+	padding-right:4px;
+	text-align:center;
+	font-weight:bold;
+}
+
+.quantity02 {
+	color:#B60000;
+	font-size:9pt;
+	padding-right:4px;
+	text-align:center;
+	font-weight:bold;
+}
+
+.quantity_bold02 {
+	color:#B60000;
+	font-size:12pt;
+	padding-right:4px;
+	text-align:right;
+	font-weight:bold;
+}
+
+
+.quantity03 {
+	color:#B60000;
+	font-size:9pt;
+	padding-right:4px;
+	text-align:right;
+	font-weight:bold;
+}
+
+.font10 {font-size:10pt;font-family:arial;color:#000000;font-weight:normal};
+.font10_bold {font-size:10pt;font-family:arial;color:#000000;font-weight:bold};
+.font12_bold {font-size:12pt;font-family:arial;color:#000000;font-weight:bold};
+
+.dinput {background:#D6D6D6;font-weight:bold;color:#000000}
+.dinput2 {background:#E8E8E8;font-weight:normal;color:#000000}
+.dinput3 {background:FFCF7B;font-weight:bold;color:#000000}
+.dinput4 {background:FFCACA;font-weight:bold;color:#000000}
+.dinput5 {background:#E7E3E7;font-weight:bold;color:#000000}
+.dinput6 {background:#FFFFFF;font-weight:bold;color:#000000}
+.dinput7 {background:#DEDFDE;font-weight:bold;color:#000000}
+.dinput8 {background:#C6C7C6;font-weight:bold;color:#000000}
+
+.font11_bold {font-size:11pt;font-family:Tahoma;color:#1A426A;font-weight:bold};
+
+.padd01 {padding:0 0 0 4}
+
+a.info{
+        position:relative;           /*this is the key*/
+        z-index:24;
+       }
+ 
+        a.info:hover {
+        z-index:25;
+      
+        }
+ 
+        a.info span{
+        display: none;  /* hide the span text using this css */
+        }
+ 
+        a.info:hover span{ /*the span will display just on :hover state*/
+        display:block;
+        position:absolute;
+        top: 1.7em;
+        left: 1.5em;
+		font-size:9pt ;
+		background :#DF0000;
+		width: 200px;
+        z-index:30;
+        }

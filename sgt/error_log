@@ -1,0 +1,77 @@
+[03-Jul-2015 19:39:09] PHP Parse error:  syntax error, unexpected '"', expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/sungoldt/public_html/sgt/mail.php on line 5
+[03-Jul-2015 19:47:31] PHP Parse error:  syntax error, unexpected '"', expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/sungoldt/public_html/sgt/mail.php on line 5
+[03-Jul-2015 19:48:09] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 5
+[03-Jul-2015 19:48:09] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 6
+[03-Jul-2015 19:48:09] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 7
+[03-Jul-2015 19:48:09] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 8
+[03-Jul-2015 19:48:14] PHP Warning:  require(banner.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/sungoldt/public_html/sgt/index.php on line 64
+[03-Jul-2015 19:48:14] PHP Warning:  require(banner.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/sungoldt/public_html/sgt/index.php on line 64
+[03-Jul-2015 19:48:14] PHP Warning:  require(banner.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/sungoldt/public_html/sgt/index.php on line 64
+[03-Jul-2015 19:48:14] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'banner.php' (include_path='.:/opt/alt/php52/usr/share/pear:/opt/alt/php52/usr/share/php') in /home/sungoldt/public_html/sgt/index.php on line 64
+[25-Oct-2015 05:24:35] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[25-Oct-2015 05:24:37] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[25-Oct-2015 05:24:37] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[25-Oct-2015 05:24:37] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[31-Jan-2016 21:17:13] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[31-Jan-2016 21:17:13] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[31-Jan-2016 21:17:14] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[31-Jan-2016 21:17:14] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[01-Feb-2016 16:08:30] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[01-Feb-2016 16:08:30] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[01-Feb-2016 16:08:30] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[01-Feb-2016 16:08:30] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[03-Feb-2016 15:55:35] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[03-Feb-2016 15:55:35] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[03-Feb-2016 15:55:35] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[03-Feb-2016 15:55:35] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[03-Feb-2016 22:01:04] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[03-Feb-2016 22:01:04] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[03-Feb-2016 22:01:04] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[03-Feb-2016 22:01:04] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[04-Feb-2016 09:34:05] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[04-Feb-2016 09:34:05] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[04-Feb-2016 09:34:05] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[04-Feb-2016 09:34:05] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[08-Aug-2016 11:19:16] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[08-Aug-2016 11:19:16] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[08-Aug-2016 11:19:16] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[08-Aug-2016 11:19:16] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[14-Aug-2016 13:28:06] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[14-Aug-2016 13:28:06] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[14-Aug-2016 13:28:06] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[14-Aug-2016 13:28:06] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[06-Jan-2017 23:25:18] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[06-Jan-2017 23:25:18] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[06-Jan-2017 23:25:18] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[06-Jan-2017 23:25:18] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[14-Jan-2017 10:16:19] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[14-Jan-2017 10:16:20] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[14-Jan-2017 10:16:20] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[14-Jan-2017 10:16:20] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[14-Jan-2017 10:16:26] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[14-Jan-2017 10:16:26] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[14-Jan-2017 10:16:26] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[14-Jan-2017 10:16:26] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[24-Jan-2017 14:59:31] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[24-Jan-2017 14:59:31] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[24-Jan-2017 14:59:31] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[24-Jan-2017 14:59:31] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[28-Mar-2017 23:10:27] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[28-Mar-2017 23:10:27] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[28-Mar-2017 23:10:27] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[28-Mar-2017 23:10:27] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[11-Apr-2017 18:25:18] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[26-Apr-2017 07:02:21] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[18-May-2017 17:24:47] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[20-May-2017 21:22:56] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[20-May-2017 21:22:56] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[20-May-2017 21:22:56] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[20-May-2017 21:22:56] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[21-May-2017 13:27:54] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[21-May-2017 13:27:54] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[21-May-2017 13:27:54] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[21-May-2017 13:27:54] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6
+[21-May-2017 15:36:32] PHP Notice:  Undefined index:  name in /home/sungoldt/public_html/sgt/mail.php on line 3
+[21-May-2017 15:36:32] PHP Notice:  Undefined index:  email in /home/sungoldt/public_html/sgt/mail.php on line 4
+[21-May-2017 15:36:32] PHP Notice:  Undefined index:  subject in /home/sungoldt/public_html/sgt/mail.php on line 5
+[21-May-2017 15:36:32] PHP Notice:  Undefined index:  message in /home/sungoldt/public_html/sgt/mail.php on line 6

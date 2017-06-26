@@ -1,0 +1,5 @@
+disable_functions = eval, base64_decode, gzinflate;
+memory_limit = 128M
+
+extension_dir = "/usr/local/lib/php/extensions/no-debug-non-zts-20100525"
+zend_extension="/usr/local/IonCube/ioncube_loader_lin_5.4.so"

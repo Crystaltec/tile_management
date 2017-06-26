@@ -1,0 +1,273 @@
+<?
+function pQuery($sql, $act) {
+	@mysql_query("set names utf8"); 
+	mysql_query($sql) or die(mysql_error() . 'Data Can not insert into Database!');
+}
+
+function selectQuery($Array, $Table) {
+    if(!is_array($Array) || sizeof($Array) < 1) {
+		echo("DB인수가 적절하지 않습니다.");
+		exit;
+    }
+    $Fields = "";
+    while(list($key) = each($Array))    $Fields = $Fields . "$Table.$key, ";
+    $Fields = rtrim($Fields, ", ");
+
+    return $Fields;
+}
+
+function getRowCount($sql) {
+	$result = mysql_query($sql) or exit(mysql_error());
+	$rows = mysql_fetch_array($result);
+	mysql_free_result($result);
+	return $rows;
+}
+
+function getRowCount2($sql) {
+	$result = mysql_query($sql) or exit(mysql_error());
+	$rows = mysql_fetch_array($result);
+	mysql_free_result($result);
+	return $rows[0];
+}
+
+function getLevelTxt($val) {
+	$alevel_txt = "";	
+	if($val == "A1") {
+		$alevel_txt="Admin";
+	} else if($val == "B1") {
+		$alevel_txt="Manager";
+	} else if($val == "B2") {
+		$alevel_txt="Staff";
+	} else if($val == "B3") {
+		$alevel_txt="Sushione Shop";
+	} else if($val == "C1") {
+		$alevel_txt="Customer";
+	}
+	return $alevel_txt;
+}
+
+function getAUDate($strdate) {	
+	$sdate = $strdate;
+	$syear = substr($sdate, 0,4);
+	$smonth = substr($sdate, 5,2);
+	$sday = substr($sdate, 8,2);
+	return $sday."-".$smonth."-".$syear;
+}
+
+
+//round 처리
+function getCalcMoney($m) {
+	$m = round($m,2);
+	$m = number_format($m, 2, '.', '');
+	$temp = (string)$m;	
+	$pos = strpos($m, ".");
+	if($pos == 0) {
+		return $temp;
+	}
+	$prev_d = substr($temp, 0, $pos);
+	$prevlast_d = substr($temp, $pos+1, -1);
+	$last_d = substr($temp, $pos+2, strlen($m));
+
+	/*
+	echo $temp . "<br>";
+	echo $prev_d . "<br>";
+	echo $prevlast_d . "<br>";
+	echo $last_d . "<br>";
+	*/
+
+
+	if($last_d < 3) {
+		$last_d = 0;
+	} elseif($last_d >=3 && $last_d < 8) {
+		$last_d = 5;
+	} elseif($last_d >= 8) {
+		$last_d = 0;
+		$prevlast_d += 1;		
+		if($prevlast_d == 10) {
+			$prevlast_d = 0;
+			$prev_d += 1;
+		}
+	}
+	/*
+	echo $prev_d . "<br>";
+	echo $prevlast_d . "<br>";
+	echo $last_d . "<br>";
+	*/
+
+	$temp = (string)$prev_d . '.' . (string)$prevlast_d . (string)$last_d;
+	//echo $temp;
+	return (float)$temp;
+}
+
+function getStateOption($columnname, $state) {
+	$AU_states = array ("ACT" ,"NSW" ,"NT","QLD","SA","TAS","VIC","WA" );
+	
+	echo "<select name='".$columnname . "'>";
+	echo "<option value=''>Please select</option>";
+
+	for($j=0; $j < count($AU_states); $j++) {
+		if($state == $AU_states[$j]) 
+			echo "<option value='".$AU_states[$j]."' selected>".$AU_states[$j]."</option>";
+		else
+			echo "<option value='".$AU_states[$j]."'>".$AU_states[$j]."</option>";
+	}	
+	
+	echo "</select>";
+}
+
+function  getOption($table,$value,$status = NULL, $event = NULL) {
+	// except COMPLETED
+	if ($status == '1') {
+		$sql = " select " . $table . "_id, " . $table . "_name from " . $table . " where ". $table . "_status <> 'COMPLETED' order by " . $table . "_name" ;
+		
+	}
+	else {
+		$sql = " select " . $table . "_id, " . $table . "_name from " . $table . " order by " . $table . "_name" ;
+	}
+	$result = mysql_query($sql) or exit(mysql_error());
+	
+	echo "<select name='". $table . "_id' style='width=150;'" . $event .">";
+	echo "<option value=''>Please select</option>";
+	
+	while($rows = mysql_fetch_row($result)) {		
+		if( $value == $rows[0] ) {
+			echo "<option value='" . $rows[0] . "' selected>" . $rows[1] . "</option>";
+		} else {
+			echo "<option value='" . $rows[0] . "'>" . $rows[1] . "</option>";
+		}	
+	}
+	
+	echo "</select>";
+
+	mysql_free_result($result);
+	
+}
+
+function  getConOption($table,$value,$condition) {
+	// except COMPLETED
+	if ($status == '1') {
+		$sql = " select " . $table . "_id, " . $table . "_name from " . $table . " where ". $table . "_status <> 'COMPLETED' order by " . $table . "_name" ;
+	}
+	else {
+		$sql = " select " . $table . "_id, " . $table . "_name from " . $table . " order by " . $table . "_name" ;
+	}
+	$result = mysql_query($sql) or exit(mysql_error());
+	
+	echo "<select name='". $table . "_id' style='width=150;'>";
+	echo "<option value=''>Please select</option>";
+	
+	while($rows = mysql_fetch_row($result)) {		
+		if( $value == $rows[0] ) {
+			echo "<option value='" . $rows[0] . "' selected>" . $rows[1] . "</option>";
+		} else {
+			echo "<option value='" . $rows[0] . "'>" . $rows[1] . "</option>";
+		}	
+	}
+	
+	echo "</select>";
+
+	mysql_free_result($result);
+	
+}
+
+function getName($table, $index) {
+	$sql = " select " . $table . "_name from " . $table . " where " . $table . "_id = '" . $index . "'" ;
+
+	$result1 = mysql_query($sql) or exit(mysql_error());
+	while ($rows = mysql_fetch_row($result1)) {
+		if ($rows) {
+			return $rows[0];
+		}
+		else {
+			return "";
+		}
+	}
+
+	mysql_free_result($result1);
+}
+
+function getSpecificName($table,$value, $index ) {
+	$sql = " select " . $value . " from " . $table . " where " . $table . "_id = '" . $index . "'" ;
+
+	$result1 = mysql_query($sql) or exit(mysql_error());
+	while ($rows = mysql_fetch_row($result1)) {
+		if ($rows) {
+			return $rows[0];
+		}
+		else {
+			return "";
+		}
+	}
+
+	mysql_free_result($result1);
+}
+
+function processOption($name,$value) {
+	$process_status = array ("PROCESSING" ,"COMPLETED" ,"HOLDING");
+	
+	echo "<select name='". $name . "' style='width=150;'>";
+	echo "<option value=''>Please select</option>";
+	
+	for($j=0; $j < count($process_status); $j++) {
+		if($value == $process_status[$j]) 
+			echo "<option value='".$process_status[$j]."' selected>".$process_status[$j]."</option>";
+		else
+			echo "<option value='".$process_status[$j]."'>".$process_status[$j]."</option>";
+	}
+	
+	echo "</select>";
+}
+
+function yearOption($name,$value) {
+
+	echo "<select name='". $name . "' >";
+	
+	$currentYear = date('Y',time());
+
+	for($j=5; $j >= 0 ; $j--) {
+		if($value == ($currentYear-$j )) 
+			echo "<option value='".($currentYear - $j) ."' selected>".($currentYear - $j)."</option>";
+		else
+			echo "<option value='".($currentYear - $j) ."'>".($currentYear - $j) ."</option>";
+	}
+	
+	echo "</select>";
+
+}
+
+function getPON($value) {
+	if ($value) {
+		return $value;
+	}
+	else {
+		$sql = "select max(orders_number) as orders_number from orders ";
+		$result = mysql_query($sql) or exit(mysql_error());
+		$rows = mysql_fetch_assoc($result);
+		if($rows["orders_number"]) {
+			$orders_number = explode("E",$rows["orders_number"]);
+			$number = $orders_number[1];
+			$year = substr($number,0,2);
+			$no = substr($number,2,4);
+		
+			if ($year = date('y',time())) {
+				$no += 1;
+				if ( strlen($no) < 4 ) {
+					$no = str_pad($no, 4, "0", STR_PAD_LEFT);
+				}
+			}
+			else {
+				$year = date('y',time());
+				$no = "0001";
+			}
+
+			return "E".$year.$no;
+		}
+		else {
+			$orders_number = "E".date('y',time())."0001";
+			return $orders_number;
+		}
+	}
+}
+
+
+?>

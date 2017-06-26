@@ -1,0 +1,57 @@
+body {
+	margin: 0;
+	padding: 0;
+	font:9pt arial;
+	color:#000000;
+	line-height:140%;
+}
+
+a {
+	font:9pt arial;
+	color:#000000;
+	line-height:140%;
+	text-decoration: none;
+}
+
+a:active, a:hover {
+	font:9pt arial;
+	color: #FF9900;
+	line-height:140%;
+	text-decoration: none;
+}
+
+table {
+	font:9pt arial;
+	color:#000000;
+	line-height:140%;
+}
+
+img {
+	border:0;
+}
+
+form {
+	margin:0;
+}
+
+.input {
+	border:1px solid #AAAAAA;
+	background-Color:#FFFFFF;
+	font:9pt Tahoma;
+	color:#000000;
+}
+
+
+.textarea {
+	border:1px solid #AAAAAA;
+	background-Color:#FFFFFF;
+	font:9pt Tahoma;
+	color:#000000;
+}
+
+.button {
+	border:1px solid #AAAAAA;
+	background-Color:#FFFFFF;
+	font:9pt Tahoma;
+	color:#000000;
+}
